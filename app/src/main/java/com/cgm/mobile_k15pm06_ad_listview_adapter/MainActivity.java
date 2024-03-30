@@ -26,9 +26,10 @@ public class MainActivity extends AppCompatActivity {
         list.add(usa);
         list.add(russia);
 
-        ArrayAdapter<Country> adapter = new ArrayAdapter<Country>(this,
-                android.R.layout.simple_list_item_1, list);
+        //ArrayAdapter<Country> adapter = new ArrayAdapter<Country>(this,
+             //   android.R.layout.simple_list_item_1, list);
+        CustomListAdapter customListAdapter = new CustomListAdapter(list, this);
 
-        countryListView.setAdapter(adapter);
+        countryListView.setAdapter(customListAdapter);
     }
 }
